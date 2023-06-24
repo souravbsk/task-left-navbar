@@ -1,0 +1,47 @@
+
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #020F22;
+  }
+  .left-panel {
+    width: 20%;
+    background-color: #02132B;
+    padding: 20px;
+    color: white;
+  }
+  .content {
+    flex: 1;
+    padding: 20px;
+    color: white;
+  }
+  .hidden {
+    display: none;
+  }
+
+ 
+  .nav-title{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  .navLink li{
+    list-style: none;
+    margin-bottom: 20px;
+
+  }
+  .navLink li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+  }
+
+  @media only screen and (max-width: 425px){
+	body{
+        background-color: red;
+    }
+}

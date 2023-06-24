@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Left Panel Example</title>
+ <link rel="stylesheet" href="style.css">
+  <script>
+    function showContent(contentId) {
+      // Hide all content sections
+      const  contentSections = document.getElementsByClassName('content-section');
+      for (let i = 0; i < contentSections.length; i++) {
+        contentSections[i].classList.add('hidden');
+      }
+      // Show the selected content section
+      var selectedContent = document.getElementById(contentId);
+      selectedContent.classList.remove('hidden');
+    }
+  </script>
+</head>
+<body>
+  <div class="left-panel">
+    <h2 class="nav-title">Left Panel</h2>
+    <ul class="navLink">
+      <li><a href="#" onclick="showContent('home-content')">Home</a></li>
+      <li><a href="#" onclick="showContent('contact-content')">Contact</a></li>
+      <li><a href="#" onclick="showContent('info-content')">Information</a></li>
+      <li><a href="#" onclick="showContent('guide-content')">Guide</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div id="home-content" class="content-section">
+      <h2>Home</h2>
+      <p>Welcome to the home page!</p>
+    </div>
+    <div id="contact-content" class="content-section hidden">
+      <h2>Contact</h2>
+      <p>Contact information goes here.</p>
+    </div>
+    <div id="info-content" class="content-section hidden">
+      <h2>Information</h2>
+      <p>Additional information can be found here.</p>
+    </div>
+    <div id="guide-content" class="content-section hidden">
+      <h2>Guide</h2>
+      <p>A helpful guide is available on this page.</p>
+    </div>
+  </div>
+</body>
+</html>
